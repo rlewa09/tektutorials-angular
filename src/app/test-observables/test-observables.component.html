@@ -1,14 +1,14 @@
 <p>test-observables works!</p>
 <!-- {{ obsValue | async}} -->
 
-<div *ngIf="(obsValue | async); else elseBlock">
-    {{ obsValue | async}} 
+<div *ngIf="(obsValue | async) as value; else elseBlock">
+    {{ value }} 
 </div>
 
 <ng-template #elseBlock>
     Observable is loading, please wait
 </ng-template>
 
-<div *ngIf="(obsValue | async)">
-    Observable has returned the data
-</div>
+<ul>
+    <li *ngFor="let breed of (hounds | async)?.message"></li>
+</ul>
