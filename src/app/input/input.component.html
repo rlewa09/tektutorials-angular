@@ -1,0 +1,18 @@
+<p>input works!</p>
+{{welcomeMessage()}}
+<input type="text" name="value" #name [(ngModel)]="value">
+
+<p>entered text is '{{value}}'</p>
+
+<p>{{ 'Hello & Welcome to '+ ' Angular Interpolation '}}</p>
+
+<p>check welcome message works - {{name.value}}</p>
+
+<button (click)="clickMe(); clickCount1=clickCount">Click me</button>
+
+<p>You have clicked {{clickCount}}</p>
+<p>You have clicked {{clickCount1}}</p>
+
+
+<input (input)="handleInput($event)">
+<p>You have entered {{value}}</p>
