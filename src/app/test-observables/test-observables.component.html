@@ -1,0 +1,14 @@
+<p>test-observables works!</p>
+<!-- {{ obsValue | async}} -->
+
+<div *ngIf="(obsValue | async); else elseBlock">
+    {{ obsValue | async}} 
+</div>
+
+<ng-template #elseBlock>
+    Observable is loading, please wait
+</ng-template>
+
+<div *ngIf="(obsValue | async)">
+    Observable has returned the data
+</div>
